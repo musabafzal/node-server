@@ -1,6 +1,9 @@
 const express = require('express')
 const path = require('path')
 const hbs = require('hbs')
+
+const port = process.env.PORT || 8080
+
 var app = express()
 
 hbs.registerPartials(path.join(__dirname, 'views/partials/'))
@@ -26,6 +29,6 @@ app.get('/about', (req, res) => {
   })
 })
 
-app.listen(8080, () => {
-  console.log('Server is up on port 8080')
+app.listen(port, () => {
+  console.log(`Server is up on port ${port}`)
 })
