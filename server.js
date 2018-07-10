@@ -11,7 +11,8 @@ app.set('view engine', 'hbs')
 app.use(express.static(path.join(__dirname, 'public/')))
 
 app.use((req, res, next) => {
-  res.render('maintainence.hbs')
+  // res.render('maintainence.hbs')
+  next()
 })
 
 app.get('/', (req, res) => {
